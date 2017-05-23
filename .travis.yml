@@ -1,18 +1,28 @@
 language: java
-before_install:
-  - sudo deb http://debian.meebey.net/experimental/mono /
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq mono-xsp4
-  - mono --version
+
 sudo: true
-jdk:
-- oraclejdk8
-- oraclejdk7
+
+os:
+  - linux
+  - osx
 
 cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+
+jdk:
+- oraclejdk8
+- oraclejdk7
+
+addons:
+  apt:
+    packages:
+      - mono-xsp4
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install mono; fi
 
 script:
 - ./gradlew paketInstall --info
