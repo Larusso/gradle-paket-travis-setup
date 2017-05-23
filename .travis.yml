@@ -4,7 +4,6 @@ sudo: true
 
 os:
   - linux
-  - osx
 
 cache:
   directories:
@@ -25,4 +24,4 @@ before_install:
 
 
 script:
-- ./gradlew paketInstall --info
+- ./gradlew paketInstall --debug --stacktrace
