@@ -1,6 +1,6 @@
 language: java
 before_install:
-  - sudo add-apt-repository ppa:v-kukol/mono-3
+  - sudo deb http://debian.meebey.net/experimental/mono /
   - sudo apt-get update -qq
   - sudo apt-get install -qq mono-xsp4
   - mono --version
