@@ -13,5 +13,5 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-after_success:
+script:
 - ./gradlew paketInstall
