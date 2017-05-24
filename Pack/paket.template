@@ -1,0 +1,6 @@
+type file
+id Test.Package
+authors Manne Endres
+owners Manne Endres
+description
+    Empty nuget package.

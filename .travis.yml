@@ -25,4 +25,4 @@ before_install:
 
 
 script:
-- ./gradlew paketInstall --info
+- ./gradlew publish-TestPackage --info

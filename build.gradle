@@ -3,3 +3,16 @@ plugins {
 }
 
 version "1.0.0"
+
+publishing {
+    repositories {
+        nuget {
+            name "Test"
+            url "https://wooga.jfrog.io/wooga/api/nuget/atlas-nuget-integrationTest"
+        }
+    }
+}
+
+paketPublish {
+    publishRepositoryName = "Test"
+}
